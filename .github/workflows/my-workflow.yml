@@ -43,6 +43,9 @@ jobs:
       - name: ha-ha
         uses: ./.github/actions/joke-action
 
+      - name: "install issue-maker dependencies"
+        run: npm install
+        working-directory: ./.github/actions/issue-maker
       - name: create-issue
         uses: ./.github/actions/issue-maker
         with:
