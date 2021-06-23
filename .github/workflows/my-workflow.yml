@@ -2,7 +2,7 @@
 
 name: JS Actions
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on: [push]
 
 
@@ -31,3 +31,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
