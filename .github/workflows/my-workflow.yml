@@ -1,3 +1,4 @@
+# https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
 name: "JS Actions"
 
 on: [push]
@@ -7,6 +8,10 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - uses: actions/checkout@v2
+
+      - name: "install hello-action dependencies"
+        run: npm install
+        working-directory: ./.github/actions/hello-world
 
       - name: "hello-action"
         uses: ./.github/actions/hello-world
