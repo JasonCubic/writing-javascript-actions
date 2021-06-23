@@ -1,5 +1,6 @@
 const core = require("@actions/core");
-const github = require("@actions/github");
+// const github = require("@actions/github");
+const { Octokit } = require("@octokit/rest");
 
 async function run() {
   try {
@@ -7,7 +8,9 @@ async function run() {
     const jokeBody = core.getInput("joke");
     const token = core.getInput("repo-token");
 
-    const octokit = github.getOctokit(token);
+    const octokit = new Octokit({ auth: token });
+
+    // const octokit = github.getOctokit(token);
 
     console.log('octokit: ', octokit);
 
