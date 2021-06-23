@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: "install hello-action dependencies"
-        run: npm install
+        run: npm ci
         working-directory: ./.github/actions/hello-world
 
       - name: "hello-action"
